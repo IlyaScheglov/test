@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/RecipeBookDB</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">admin759</property>
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        <mapping class="com.example.Recipes.entity.User"/>
+        <mapping class="com.example.Recipes.entity.Recipes"/>
+        <mapping class="com.example.Recipes.entity.Favourites"/>
+        <mapping class="com.example.Recipes.entity.Likes"/>
+        <mapping class="com.example.Recipes.entity.Tags"/>
+        <mapping class="com.example.Recipes.entity.Categories"/>
+        <mapping class="com.example.Recipes.entity.TagsInRecipe"/>
+
+
+    </session-factory>
+</hibernate-configuration>
